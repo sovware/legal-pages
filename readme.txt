@@ -2,8 +2,8 @@
 Contributors: AazzTech
 Tags: legal, legal page, legal pages,  legal documents, law, legal page template, privacy policy, refund-policy, digital goods refund policy, linking policy, external links policy, cookie privacy policy, facebook policy, coppa - children’s online privacy policy, advertising disclosures, confidentiality disclosure, testimonials disclosure, affiliate disclosure, disclaimer, earnings disclaimer, medical disclaimer, terms of use, forced agreement to the terms, amazon affiliate, dmca, antispam, double dart cookie, about us, california privacy rights, end-user license agreement
 Requires at least: 4.0
-Tested up to:  5.4
-Stable tag: 1.0.3
+Tested up to:  5.5
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,9 @@ If you like this free version and want to get more templates and features and al
 8. Edit Legal Page Template
 
 == Changelog ==
+= 1.0.4 =
+* Add: WordPress 5.5 compatibility
+* Fix: undefine issue in single template
 = 1.0.3 =
 * Improved: WordPress version
 = 1.0.2 =
