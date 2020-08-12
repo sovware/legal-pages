@@ -130,10 +130,10 @@ class ADL_LP_ajax_handler {
         $adl_lp_general = get_option('adl_lp_general');
         $adl_lp_social_find = array('[facebookUrl]','[googlePlusUrl]','[linkedInUrl]','[twitterUrl]',);
         $adl_lp_social = get_option('adl_lp_social');
-        $fb= $adl_lp_social['facebookUrl'];
-        $gp= $adl_lp_social['googlePlusUrl'];
-        $li= $adl_lp_social['linkedInUrl'];
-        $tt= $adl_lp_social['twitterUrl'];
+        $fb= ! empty( $adl_lp_social['facebookUrl'] ) ? $adl_lp_social['facebookUrl'] : '';
+        $gp= ! empty( $adl_lp_social['googlePlusUrl'] ) ? $adl_lp_social['googlePlusUrl'] : '';
+        $li= ! empty( $adl_lp_social['linkedInUrl'] ) ? $adl_lp_social['linkedInUrl'] : '';
+        $tt= ! empty( $adl_lp_social['twitterUrl'] ) ? $adl_lp_social['twitterUrl'] : '';
         $social_array = array(
             "<a href='{$fb}' target='_blank'> Find Us on Facebook</a>",
             "<a href='{$gp}' target='_blank'> Connect us on Google Plus</a>",
