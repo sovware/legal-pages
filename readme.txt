@@ -96,7 +96,7 @@ If you like this free version and want to get more templates and features and al
 == Changelog ==
 = 1.0.4 =
 * Add: WordPress 5.5 compatibility
-* Fix: undefine issue in single template
+* Fix: undefined issue in single template
 = 1.0.3 =
 * Improved: WordPress version
 = 1.0.2 =
