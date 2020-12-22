@@ -1,13 +1,13 @@
 <?php
 /*
 Plugin Name: Legal Pages
-Plugin URI: https://aazztech.com/product/legal-pages-pro
+Plugin URI: https://wpwax.com/product/legal-pages-pro
 Description: A very useful plugin to generate legal pages for your websites/ business. It is simple, easy and elegant to use. It comes with ready-made templates which gives you even better experience creating legal pages with ease. You can customize the page template too.
-Version: 1.0.4
-Author: AazzTech
-Author URI: https://aazztech.com
+Version: 1.0.5
+Author: wpWax
+Author URI: https://wpwax.com
 License: GPLv2 or later
-Text Domain: adl-legal-pages
+Text Domain: legal-pages
 */
 
 /*

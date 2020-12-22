@@ -2,8 +2,8 @@
 Contributors: AazzTech
 Tags: legal, legal page, legal pages,  legal documents, law, legal page template, privacy policy, refund-policy, digital goods refund policy, linking policy, external links policy, cookie privacy policy, facebook policy, coppa - children’s online privacy policy, advertising disclosures, confidentiality disclosure, testimonials disclosure, affiliate disclosure, disclaimer, earnings disclaimer, medical disclaimer, terms of use, forced agreement to the terms, amazon affiliate, dmca, antispam, double dart cookie, about us, california privacy rights, end-user license agreement
 Requires at least: 4.0
-Tested up to:  5.5
-Stable tag: 1.0.4
+Tested up to:  5.6
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,7 +33,7 @@ This plugin comes with pre-made legal template to help you create important lega
 *   Modern Object Oriented Codes.
 *   And many more features. 
 
-If you like this free version and want to get more templates and features and also support us, then you may upgrade to the [__Pro version__](https://aazztech.com/product/legal-pages-pro).
+If you like this free version and want to get more templates and features and also support us, then you may upgrade to the [__Pro version__](https://wpwax.com/product/legal-pages-pro).
 
 = It contains all the features of the free version and including the following =
 *   26 Legal Page Templates. You can use them to create any type of legal page you want. You do not need to be an expert in law to create awesome legal pages with our premium plugin.
@@ -94,6 +94,8 @@ If you like this free version and want to get more templates and features and al
 8. Edit Legal Page Template
 
 == Changelog ==
+= 1.0.5 =
+* Add: WordPress 5.5 compatibility
 = 1.0.4 =
 * Add: WordPress 5.5 compatibility
 * Fix: undefined issue in single template
