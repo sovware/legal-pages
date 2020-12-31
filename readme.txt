@@ -1,5 +1,5 @@
 ﻿=== Legal Pages ===
-Contributors: AazzTech
+Contributors: wpwax
 Tags: legal, legal page, legal pages,  legal documents, law, legal page template, privacy policy, refund-policy, digital goods refund policy, linking policy, external links policy, cookie privacy policy, facebook policy, coppa - children’s online privacy policy, advertising disclosures, confidentiality disclosure, testimonials disclosure, affiliate disclosure, disclaimer, earnings disclaimer, medical disclaimer, terms of use, forced agreement to the terms, amazon affiliate, dmca, antispam, double dart cookie, about us, california privacy rights, end-user license agreement
 Requires at least: 4.0
 Tested up to:  5.6
