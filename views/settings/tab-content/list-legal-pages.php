@@ -14,6 +14,7 @@
                     <th>Title</th>
                     <th>Author</th>
                     <th>Created at</th>
+                    <th>Shortcode</th>
                     <th class="text-center">Action</th>
                 </tr>
                 </thead>
@@ -27,6 +28,7 @@
                         <td><a href="<?= get_edit_post_link($adl_lp->ID); ?>" title="Edit this"> <?= $adl_lp->post_title; ?>  </a></td>
                         <td><?= $ADL_LP->author_name_and_post_link($adl_lp->post_author, 'page'); ?></td>
                         <td><?= $ADL_LP->humanDate($adl_lp->ID); ?></td>
+                        <td>[wpwax_legal_page id="<?php echo $adl_lp->ID; ?>"]</td>
                         <td class="text-center"><a class='btn btn-info btn-xs' href="<?= $adl_lp->guid; ?>" title="View page"><span class="glyphicon glyphicon-eye-open"></span> View</a> <a class='btn btn-info btn-xs' href="<?= get_edit_post_link($adl_lp->ID); ?>" title="Edit page"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" data-id="<?= $adl_lp->ID; ?>" class="btn btn-danger btn-xs moveToTrash" title="Move to Trash"><span class="glyphicon glyphicon-trash"></span> Trash</a></td>
                     </tr>
                <?php  }

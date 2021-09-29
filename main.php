@@ -18,9 +18,43 @@ if ( ! class_exists('Adl_Legal_Pages') ) :
             $this->template_table_name = $wpdb->prefix .'adl_lp_templates';
             // load all classes and its object
             $this->load_classes(ADL_LP_CLASS_DIR);
-
+            add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes') );
+            add_shortcode( 'wpwax_legal_page', array( $this, 'wpwax_legal_page' ) );
         }
 
+        public function wpwax_legal_page( $atts, $content = null ) {
+            ob_start();
+
+            extract( shortcode_atts(array(
+                        'id' => "",
+                    ), $atts
+                    )
+                );
+            if ( empty( $id ) ) {
+                return;
+            }
+            $description = get_post_field( 'post_content', $id );
+            echo $description;
+            $true =  ob_get_clean();
+		    return $true;
+        }
+
+        public function add_meta_boxes() {
+            $legal_page = get_post_meta( get_the_ID(), 'is_adl_legal_page', true );
+
+            if( ! empty( $legal_page ) ) {
+                add_meta_box( 'wpwax_lp', __( 'Shortcode', 'legal-pages' ), array( $this, 'metabox_shortcode' ), 'page', 'side' );
+            }
+        }
+
+        public function metabox_shortcode() {
+            ?>
+            <div>
+                <div>[wpwax_legal_page id="<?php echo get_the_ID(); ?>"]</div>
+            </div>
+        <?php        
+
+        }
 
         public function remove_plugin_data(  ) {
             global $wpdb;
