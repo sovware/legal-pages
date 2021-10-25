@@ -12,7 +12,7 @@ if ( ! class_exists('Adl_Legal_Pages') ) :
          * Load all classes and instantiate them and flush rewrite rules
          */
         public function __construct( ){
-        global $wpdb;
+            global $wpdb;
             // Don't let the class/plugin instantiate outside of WordPress
             if ( ! defined('ABSPATH') ) { die( 'Cheating? Direct access is not allowed !!!' ); }
             $this->template_table_name = $wpdb->prefix .'adl_lp_templates';
@@ -20,6 +20,8 @@ if ( ! class_exists('Adl_Legal_Pages') ) :
             $this->load_classes(ADL_LP_CLASS_DIR);
             add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes') );
             add_shortcode( 'wpwax_legal_page', array( $this, 'wpwax_legal_page' ) );
+            // Initialize appsero tracking
+            $this->init_appsero();
         }
 
         public function wpwax_legal_page( $atts, $content = null ) {
@@ -37,6 +39,24 @@ if ( ! class_exists('Adl_Legal_Pages') ) :
             echo $description;
             $true =  ob_get_clean();
 		    return $true;
+        }
+
+        /**
+         * Initialize appsero tracking.
+         *
+         * @see https://github.com/Appsero/client
+         *
+         * @return void
+         */
+        public function init_appsero() {
+            if ( ! class_exists( '\Appsero\Client' ) ) {
+                require_once (dirname(__FILE__) . '/includes/appsero/src/Client.php');
+            }
+
+            $client = new Appsero\Client( '122f8d75-c145-4d00-b71c-bbcf9089b987', 'Legal Pages', __FILE__ );
+
+            // Active insights
+            $client->insights()->init();
         }
 
         public function add_meta_boxes() {
