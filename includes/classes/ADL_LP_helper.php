@@ -97,7 +97,7 @@ class ADL_LP_helper {
     }
 
     public function upgrade_to_pro_link( $plugin_slug='legal-pages-pro', $link_text = 'Pro Version', $target='_blank' ) {
-        return "<a class='button button-primary button-large' href='https://aazztech.com/product/{$plugin_slug}' target='{$target}'>{$link_text}</a>";
+        return "<a class='wplp-btn-primary' href='https://wpwax.com/product/{$plugin_slug}' target='{$target}'>{$link_text}</a>";
     }
 
     public function adl_lp_plugin_page( $tab = 'home', $page='adl-legal-pages' ) {

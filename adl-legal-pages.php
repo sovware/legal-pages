@@ -32,6 +32,7 @@ Copyright 2016 ADL plugins.
 
 defined('ABSPATH') || die( 'Cheating? Direct access is not allowed !!!' );
 if ( !defined('ADL_LP_BASE') ) { define('ADL_LP_BASE', plugin_basename( __FILE__ )); }
+if ( ! defined( 'WPLP_URL' ) ) { define( 'WPLP_URL', plugin_dir_url( __FILE__ ) ); }
 
 // Load plugin config
 require_once 'config.php';
