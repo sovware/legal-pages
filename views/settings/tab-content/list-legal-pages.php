@@ -30,7 +30,7 @@
                 </tr>
             <?php  }
             } else {
-                echo '<tr> <td> <p> Looks like you have not created any legal pages yet.</p> <button class="btn button-primary" id="CreateALegalPage">Create a new Legal Page</button> </td> </tr>';
+                echo '<tr> <td> <p> Looks like you have not created any legal pages yet.</p>  </td> </tr>';
             }
             ?>
         </table> <!--ends .table wplp-table-->
