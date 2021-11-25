@@ -90,7 +90,7 @@ class ADL_LP_helper {
      *
      * @return string It returns the url to a specific admin page with an id, page, and action query string.
      */
-    public function adl_lp_action_link( $id=0, $action='edit', $page='adl-create-template', $echo=true) {
+    public function adl_lp_action_link( $id=0, $action='edit', $page='legal-page-template', $echo=true) {
         $url = get_admin_url() . "admin.php?page={$page}&action={$action}&id={$id}";
         if (!$echo) return $url;
         echo $url;
