@@ -85,7 +85,7 @@
             End-user License Agreement
         </li>
 
-        <a class="wplp-btn-primary wplp-mt-30" href="https://aazztech.com/product/legal-pages-pro/" target="_blank">And check out more features »</a>
+        <a class="wplp-btn-primary wplp-mt-30" href="https://wpwax.com/product/legal-pages-pro/" target="_blank">And check out more features »</a>
 
     </ul>
 
