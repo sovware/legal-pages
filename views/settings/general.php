@@ -91,7 +91,7 @@ $homeTabData = array_merge(get_option('adl_lp_general'), get_option('adl_lp_soci
                             <div class="row">
                                 <div class="col-md-12 text-center" >
                                     <h3 style="margin-top: 50px;">====== Support Forum ======</h3>
-                                    <p><p>If you need any helps, please don't hesitate to post it on <a href="https://wordpress.org/support/plugin/legal-pages" target="_blank">WordPress.org Support Forum</a> or <a href="https://adlplugins.com/support" target="_blank">AdlPlugins.com Support Forum</a>.</p></p><br />
+                                    <p><p>If you need any helps, please don't hesitate to post it on <a href="https://wordpress.org/support/plugin/legal-pages" target="_blank">WordPress.org Support Forum</a> or <a href="https://wpwax.com/contact" target="_blank">wpwax.com Support Forum</a>.</p></p><br />
                                     <h3>====== More Features ======</h3>
                                     <p>Upgrading to the <a href="https://wpwax.com/product/adl-legal-pages-pro" target="_blank">Pro Version</a> would unlock more amazing features of the plugin.</p>
                                 </div>
