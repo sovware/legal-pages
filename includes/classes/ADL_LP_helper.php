@@ -104,6 +104,31 @@ class ADL_LP_helper {
         return get_admin_url() ."admin.php?page={$page}&tab={$tab}";
     }
 
+    public function legal_pages() {
+        global $ADL_LP, $wpdb;
+        $sql1 = array(
+            'post_type'  => 'page',
+            'posts_per_page' => -1,
+            'meta_query' => array(
+                array(
+                    'key'     => 'is_adl_legal_page',
+                    'value'   => true,
+                    'compare' => '=',
+                ),
+
+            ),
+        );
+
+        return new WP_Query( $sql1 ); // get all legal pages
+    }
+
+    public function legal_page_templates() {
+        global $ADL_LP, $wpdb;
+        $sql2 = 'SELECT * FROM '.$ADL_LP->template_table_name .' LIMIT 40';
+        return $wpdb->get_results($sql2); // get all legal templates
+
+    }
+
 }
 
 endif;

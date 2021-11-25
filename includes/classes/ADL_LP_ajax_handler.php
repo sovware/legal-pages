@@ -186,7 +186,15 @@ class ADL_LP_ajax_handler {
 
             );
 
+            $adl_lp_social = array(
+                'facebookUrl' => '',
+                'googlePlusUrl' => '',
+                'linkedInUrl' => '',
+                'mailingAddress' => '',
+            );
+
             update_option('adl_lp_general', $adl_lp_general); // reset saved data
+            update_option('adl_lp_social', $adl_lp_social);
 
             echo 'success';
 
@@ -221,6 +229,16 @@ class ADL_LP_ajax_handler {
                 'mailingAddress' => (isset($_POST['mailingAddress'])) ? sanitize_text_field($_POST['mailingAddress']): '',
 
             );
+
+            $adl_lp_social = array(
+                'facebookUrl' => (isset($_POST['facebookUrl'])) ? esc_url_raw($_POST['facebookUrl']) : '',
+                'googlePlusUrl' => (isset($_POST['googlePlusUrl'])) ? esc_url_raw($_POST['googlePlusUrl']) : '',
+                'linkedInUrl' => (isset($_POST['linkedInUrl'])) ? esc_url_raw($_POST['linkedInUrl']) : '',
+                'twitterUrl' => (isset($_POST['twitterUrl'])) ? esc_url_raw($_POST['twitterUrl']) : '',
+
+            );
+
+            update_option('adl_lp_social', $adl_lp_social);
 
             update_option('adl_lp_general', $adl_lp_general);
             echo 'success';

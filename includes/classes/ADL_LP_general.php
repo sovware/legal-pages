@@ -14,7 +14,7 @@ class ADL_LP_general {
      */
     public function show_admin_menu() {
         add_menu_page(
-            __('Legal Page Settings', ADL_LP_TEXTDOMAIN),
+            __('Legal Pages', ADL_LP_TEXTDOMAIN),
             __('Legal Pages', ADL_LP_TEXTDOMAIN),
             'manage_options',
             'adl-legal-pages',
@@ -24,43 +24,43 @@ class ADL_LP_general {
             );
 
         add_submenu_page('adl-legal-pages',
-            __('Create Legal Page', ADL_LP_TEXTDOMAIN),
-            __('Create Legal Page', ADL_LP_TEXTDOMAIN),
+            __('Settings', ADL_LP_TEXTDOMAIN),
+            __('Settings', ADL_LP_TEXTDOMAIN),
             'manage_options',
-            'adl-legal-pages&tab=createLegalPage',
-            array($this, 'show_create_legal_page')
+            'adl-legal-pages',
+            array($this, 'general_setting')
+        );
+
+        add_submenu_page('adl-legal-pages',
+            __('Add New Legal Page', ADL_LP_TEXTDOMAIN),
+            __('Add New Legal Page', ADL_LP_TEXTDOMAIN),
+            'manage_options',
+            'createLegalPage',
+            array($this, 'add_new_legal_page')
         );
         
         add_submenu_page('adl-legal-pages',
             __('All Legal Pages', ADL_LP_TEXTDOMAIN),
             __('All Legal Pages', ADL_LP_TEXTDOMAIN),
             'manage_options',
-            'adl-legal-pages&tab=allPages',
-            array($this, 'show_create_legal_page')
+            'all-legal-Pages',
+            array($this, 'all_legal_page')
         );
 
         add_submenu_page('adl-legal-pages',
-            __('Create | Edit Legal Page Template', ADL_LP_TEXTDOMAIN),
-            __('Create Legal Page Template', ADL_LP_TEXTDOMAIN),
+            __('Legal Page Templates', ADL_LP_TEXTDOMAIN),
+            __('Legal Page Templates', ADL_LP_TEXTDOMAIN),
             'manage_options',
-            'adl-create-template',
-            array($this, 'show_create_template')
+            'legal-page-template',
+            array($this, 'legal_page_template')
         );
 
         add_submenu_page('adl-legal-pages',
-            __('All Templates', ADL_LP_TEXTDOMAIN),
-            __('All Templates', ADL_LP_TEXTDOMAIN),
+            __('Help & Support', ADL_LP_TEXTDOMAIN),
+            __('Help & Support', ADL_LP_TEXTDOMAIN),
             'manage_options',
-            'adl-legal-pages&tab=editTemplates',
-            array($this, 'show_create_legal_page')
-        );
-
-        add_submenu_page('adl-legal-pages',
-            __('Get Support', ADL_LP_TEXTDOMAIN),
-            __('Get Support', ADL_LP_TEXTDOMAIN),
-            'manage_options',
-            'adl-legal-pages&tab=support',
-            array($this, 'show_create_legal_page')
+            'legal-page-support',
+            array($this, 'get_support')
         );
 
         add_submenu_page('adl-legal-pages',
@@ -88,6 +88,33 @@ class ADL_LP_general {
         $adl_lp_templates = $wpdb->get_results($sql1); // get all legal templates
         $ADL_LP->loadView('settings/tab-content/create-edit-templates', $adl_lp_templates);
     }
+
+    public function add_new_legal_page() {
+        global $ADL_LP, $wpdb;
+         $ADL_LP->loadView('settings/tab-content/create-page'); 
+    }
+
+    public function all_legal_page() {
+        global $ADL_LP;
+        $adl_legal_pages = $ADL_LP->legal_pages();
+        $ADL_LP->loadView('settings/tab-content/list-legal-pages', $adl_legal_pages);
+    }
+
+    public function legal_page_template() {
+        global $ADL_LP;
+        $adl_lp_templates = $ADL_LP->legal_page_templates();
+        if( ! empty( $_GET['action'] ) && ( 'new-template' == $_GET['action'] || 'edit' == $_GET['action'])  ) {
+            $ADL_LP->loadView('settings/tab-content/create-edit-templates', $adl_lp_templates);
+        }else{
+            $ADL_LP->loadView('settings/tab-content/create-edit-templates-for-tab', $adl_lp_templates);
+        }
+        
+    }
+
+    public function get_support() {
+        global $ADL_LP;
+        $ADL_LP->loadView('support');
+    }
     
     public function general_setting() {
         global $ADL_LP;
@@ -97,7 +124,7 @@ class ADL_LP_general {
         );
         // if terms already accepted then show the setting else tell the users to accept terms
         if ( get_option('adl_lp_accept_term') ) {
-            $ADL_LP->loadView('settings/general', $data);
+            $ADL_LP->loadView('settings/general-settings', $data);
             //update_option('adl_lp_accept_term', 0);// test Disclaimer page uncommenting this.
         }else {
             $this->acceptTermsAndCondition();

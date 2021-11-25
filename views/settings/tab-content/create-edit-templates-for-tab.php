@@ -9,8 +9,8 @@ $adl_lp_templates = (!empty($args)) ? $args : null; // data are passed to pages 
         <div class="col-md-12">
             <table class="table table-striped">
                 <thead>
-                <a href="<?= $ADL_LP->adl_lp_plugin_page('editTemplates'); ?>" class="btn btn-primary btn-xs pull-right"> <span class="glyphicon glyphicon-refresh"></span> Refresh templates lists </a>
-                <a href="<?= $ADL_LP->adl_lp_plugin_page('', 'adl-create-template'); ?>" id="createLPTemplateBtn" class="btn btn-primary btn-xs pull-left"> <span class="glyphicon glyphicon-plus-sign"></span> Add New Legal Page Template </a>
+                <a href="" id="refreshPage" class="btn btn-primary btn-xs pull-right"> <span class="glyphicon glyphicon-refresh"></span> Refresh templates lists </a>
+                <a href="<?= get_admin_url() . 'admin.php?page=legal-page-template&action=new-template'; ?>" id="createLPTemplateBtn" class="btn btn-primary btn-xs pull-left"> <span class="glyphicon glyphicon-plus-sign"></span> Add New Legal Page Template </a>
                 <tr>
                     <th>Template id</th>
                     <th>Template Name</th>
