@@ -20,8 +20,18 @@ if ( ! class_exists('Adl_Legal_Pages') ) :
             $this->load_classes(ADL_LP_CLASS_DIR);
             add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes') );
             add_shortcode( 'wpwax_legal_page', array( $this, 'wpwax_legal_page' ) );
+            if( empty( get_option('wplp_legal_page') ) ) {
+                add_action( 'admin_notices', array( $this, 'admin_notices') );
+            } 
             // Initialize appsero tracking
             $this->init_appsero();
+        }
+
+        public function admin_notices() {
+            global $pagenow, $ADL_LP;
+            if ( 'index.php' == $pagenow || 'plugins.php' == $pagenow || 'adl-legal-pages' == $pagenow || 'all-legal-Pages' == $pagenow ) {
+                $ADL_LP->loadView('notice');
+            }
         }
 
         public function wpwax_legal_page( $atts, $content = null ) {
@@ -217,7 +227,7 @@ if ( ! class_exists('Adl_Legal_Pages') ) :
             unset($links['edit']); // protect editing the plugin
             $links[] = sprintf( '<a href="%s" title="%s">%s</a>', 'admin.php?page=adl-legal-pages', 'Add New Legal Pages', __( 'Add New', ADL_LP_TEXTDOMAIN ) );
             $links[] = sprintf( '<a href="%s" title="%s">%s</a>', 'admin.php?page=adl-legal-pages&tab=allPages', 'View All Legal Pages', __( 'View All', ADL_LP_TEXTDOMAIN ) );
-            $links[] = sprintf( '<a href="%s" title="%s">%s</a>', 'https://adlplugins.com/legal-pages-pro', 'Upgrade to Pro', __( 'Upgrade', ADL_LP_TEXTDOMAIN ) );
+            $links[] = sprintf( '<a href="%s" title="%s">%s</a>', 'https://wpwax.com/product/legal-pages-pro/', 'Upgrade to Pro', __( 'Upgrade', ADL_LP_TEXTDOMAIN ) );
             return $links;
         }
 

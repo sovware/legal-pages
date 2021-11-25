@@ -3,7 +3,7 @@
 Plugin Name: Legal Pages - Privacy Policy, GDPR, Terms & Conditions, Cookie Notice Generator
 Plugin URI: https://wpwax.com/product/legal-pages-pro
 Description: A very useful plugin to generate legal pages for your websites/ business. It is simple, easy and elegant to use. It comes with ready-made templates which gives you even better experience creating legal pages with ease. You can customize the page template too.
-Version: 1.1.0
+Version: 1.2.0
 Author: wpWax
 Author URI: https://wpwax.com
 License: GPLv2 or later
@@ -25,7 +25,7 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-Copyright 2016 ADL plugins.
+Copyright 2016 wpwax.
 */
 
 // Make sure we don't expose any info if called directly

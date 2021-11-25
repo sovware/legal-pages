@@ -3,7 +3,7 @@ Contributors: wpWax
 Tags: legal, legal page, legal pages,  legal documents, law, legal page template, privacy policy, refund-policy, digital goods refund policy, linking policy, external links policy, cookie privacy policy, facebook policy, coppa - children’s online privacy policy, advertising disclosures, confidentiality disclosure, testimonials disclosure, affiliate disclosure, disclaimer, earnings disclaimer, medical disclaimer, terms of use, forced agreement to the terms, amazon affiliate, dmca, antispam, double dart cookie, about us, california privacy rights, end-user license agreement
 Requires at least: 4.0
 Tested up to:  5.8
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -93,6 +93,8 @@ If you like this free version and want to get more templates and features and al
 7. Edit Legal Page Template
 
 == Changelog ==
+= 1.2.0 =
+* Fix : Design issue
 = 1.1.0 =
 * Add: WordPress 5.8 compatibility
 * Add: Shortcode
