@@ -300,12 +300,6 @@
         location.reload();
     });
 
-    // Refresh the page on user click on refresh button
-    $('#add_new_LP_button').on('click', function (e) {
-        e.preventDefault();
-        $('a[href="#createLegalPage"]').trigger('click');
-    });
-
 
 
 

@@ -101,7 +101,7 @@ class ADL_LP_helper {
     }
 
     public function adl_lp_plugin_page( $tab = 'home', $page='adl-legal-pages' ) {
-        return get_admin_url() ."admin.php?page={$page}&tab={$tab}";
+        return get_admin_url() ."admin.php?page={$page}";
     }
 
     public function legal_pages() {

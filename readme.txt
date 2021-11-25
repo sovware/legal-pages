@@ -85,13 +85,12 @@ If you like this free version and want to get more templates and features and al
 
 == Screenshots ==
 1. General Settings - General Information
-2. General Settings - Social Information
-3. General Settings - Miscellaneous
-4. Add New Page
-5. All Legal Pages
-6. All Legal Page Templates
-7. Create New Page Template
-8. Edit Legal Page Template
+2. General Settings - Miscellaneous
+3. Add New Page
+4. All Legal Pages
+5. All Legal Page Templates
+6. Create New Page Template
+7. Edit Legal Page Template
 
 == Changelog ==
 = 1.1.0 =

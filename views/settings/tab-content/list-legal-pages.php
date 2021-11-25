@@ -2,7 +2,7 @@
 
 ?>
 <div class="wplp-container-fluid wplp-ml-10 wplp-pr-30" id="legalPageContainer">
-    <h1 class="wplp-page-title">Add New Legal Page <a href="<?= $ADL_LP->adl_lp_plugin_page('createLegalPage'); ?>" id="add_new_LP_button" class="wplp-btn-blue-royal wplp-ml-15"> Add New Legal Page </a></h1>
+    <h1 class="wplp-page-title">Add New Legal Page <a href="<?= get_admin_url() ."admin.php?page=createLegalPage"; ?>" class="wplp-btn-blue-royal wplp-ml-15"> Add New Legal Page </a></h1>
     <div class="wplp-page-wrapper">
         <table class="wplp-table">
             <thead>
