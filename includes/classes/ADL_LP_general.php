@@ -38,7 +38,7 @@ class ADL_LP_general {
             'createLegalPage',
             array($this, 'add_new_legal_page')
         );
-        
+
         add_submenu_page('adl-legal-pages',
             __('All Legal Pages', ADL_LP_TEXTDOMAIN),
             __('All Legal Pages', ADL_LP_TEXTDOMAIN),
@@ -72,7 +72,7 @@ class ADL_LP_general {
         );
 
     }
-    
+
     public function upgrade_notice(  ) {
         global $ADL_LP;
         $ADL_LP->loadView('upgrade-features');
@@ -81,7 +81,7 @@ class ADL_LP_general {
     public function show_create_legal_page(  ) {
         // this function is kept empty intentionally to redirect menu pages to the specific setting tab using javascripts.
     }
-    
+
     public function show_create_template(  ) {
         global $ADL_LP, $wpdb;
         $sql1 = 'SELECT * from '.$ADL_LP->template_table_name .' LIMIT 40';
@@ -91,7 +91,7 @@ class ADL_LP_general {
 
     public function add_new_legal_page() {
         global $ADL_LP, $wpdb;
-         $ADL_LP->loadView('settings/tab-content/create-page'); 
+         $ADL_LP->loadView('settings/tab-content/create-page');
     }
 
     public function all_legal_page() {
@@ -108,14 +108,14 @@ class ADL_LP_general {
         }else{
             $ADL_LP->loadView('settings/tab-content/create-edit-templates-for-tab', $adl_lp_templates);
         }
-        
+
     }
 
     public function get_support() {
         global $ADL_LP;
         $ADL_LP->loadView('support');
     }
-    
+
     public function general_setting() {
         global $ADL_LP;
         $data = array(
@@ -130,11 +130,11 @@ class ADL_LP_general {
             $this->acceptTermsAndCondition();
         }
     }
-    
+
     public function acceptTermsAndCondition() {
         global $ADL_LP;
         // set adl_lp_accept_term when user use the plugin for the first time and them load the general  setting. else show the terms page.
-        if ( isset($_POST['adl_lp_submit']) && 'I Agree' == $_POST['adl_lp_submit'] && isset($_POST['adl_accept_terms'])) {
+        if ( isset($_POST['adl_lp_submit']) && 'Accept' == $_POST['adl_lp_submit'] && isset($_POST['adl_accept_terms'])) {
             update_option('adl_lp_accept_term', $_POST['adl_accept_terms']);
             $this->general_setting();
         }else{

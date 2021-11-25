@@ -19,6 +19,7 @@ class ADL_LP_enqueue {
           wp_enqueue_style( 'adl-lp-bootstrap', ADL_LP_ADMIN_ASSETS . 'css/bootstrap.min.css', false, ADL_LP_VERSION );
             wp_enqueue_style('adl-tabs', ADL_LP_ADMIN_ASSETS . 'css/tabs.css', array('adl-lp-bootstrap'), ADL_LP_VERSION);
             wp_enqueue_style('adl-main', ADL_LP_ADMIN_ASSETS . 'css/adl-lp-main.css', array('adl-lp-bootstrap', 'adl-tabs'), ADL_LP_VERSION);
+            wp_enqueue_style('adl-style', ADL_LP_ADMIN_ASSETS . 'css/style.css', array('adl-lp-bootstrap', 'adl-tabs'), ADL_LP_VERSION);
             wp_enqueue_script( 'adl-bootstrap-js', ADL_LP_ADMIN_ASSETS . 'js/bootstrap.min.js', array( 'jquery' ), ADL_LP_VERSION, true );
 
 

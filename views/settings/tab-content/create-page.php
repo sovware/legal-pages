@@ -1,24 +1,22 @@
 <!--Tab: Create page content-->
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <h1 class="adl_lp_title">Add New Legal Page</h1>
+<div class="wplp-container-lg wplp-ml-10">
+    <h1 class="wplp-page-title">Add New Legal Page</h1>
+    <div class="wplp-page-wrapper">
+        <div class="wplp-page-wrapper__content">
             <form action="" method="post" id="addNewLegalPage">
-                <div class="form-group">
+                <div class="form-group wplp-mb-30">
                     <input type="text" name="lp_title" class="form-control" id="lp_title" placeholder="Enter a title or Choose a Template from the right">
                 </div>
                 <?php
                     $content = ( isset( $_POST['adl_lp_content']  ) ) ? wp_kses_post( $_POST['adl_lp_content'] ): 'Enter some content or Choose a template from the right side to edit and publish. After saving the page, you can find it in the "All Legal Pages" tab or you can find it under WordPress page menu';
                     wp_editor($content, 'adl_lp_content', array('editor_height' => 400));
                 ?>
-                <button type="submit" class="btn btn-primary btn-outline-rounded"> Save Page</button>
+                <button type="submit" class="wplp-btn-primary wplp-mt-30"> Save Page</button>
                 <?php wp_nonce_field( $ADL_LP->nonceAction(), $ADL_LP->nonceName()); ?>
             </form>
         </div> <!--ends .col-md-8 left column-->
 
-
-
-        <div class="col-md-4">
+        <div class="wplp-page-wrapper__sidebar">
             <div id="ChooseTemplate" class="postbox">
                 <h3><span class='dashicons dashicons-admin-generic'></span> Choose a Template</h3>
                 <?php
