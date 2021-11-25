@@ -2,7 +2,7 @@
 <h3>Main Features of the Pro Version</h3>
 <ul>
     <li><span class="dashicons dashicons-yes"></span>
-        25 Legal Page Templates.
+        26 Legal Page Templates.
     </li>
 
     <li><span class="dashicons dashicons-yes"></span>

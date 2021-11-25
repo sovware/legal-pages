@@ -274,13 +274,13 @@ $disabled_pop_js_css = (isset($homeTabData['disabled_pop_js_css'])) ? absint($ho
 
                                         <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" name="hide_lp_in_search" value="1" <?php checked(@$args['hide_lp_in_search']); ?> > Exclude legal pages in Search Result
+                                                <input type="checkbox" name="hide_lp_in_search" value="1" <?php checked(@$homeTabData['hide_lp_in_search']); ?> > Exclude legal pages in Search Result
                                             </label>
                                         </div>
 
                                         <div class="checkbox">
                                             <label style="color: red;">
-                                                <input  type="checkbox" name="delete_adl_lp_data" value="1" <?php checked(@$args['delete_adl_lp_data']); ?> > Warning!! Check this to remove plugin's data on uninstall ( Check it ONLY IF YOU UNDERSTAND what you are doing.)
+                                                <input  type="checkbox" name="delete_adl_lp_data" value="1" <?php checked(@$homeTabData['delete_adl_lp_data']); ?> > Warning!! Check this to remove plugin's data on uninstall ( Check it ONLY IF YOU UNDERSTAND what you are doing.)
                                             </label>
                                         </div>
 

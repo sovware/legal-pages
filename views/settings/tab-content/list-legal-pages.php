@@ -3,10 +3,10 @@
 ?>
 <div class="container" id="legalPageContainer">
     <div class="row">
-        <div class="col-md-12">            
+        <div class="col-md-12">
             <table class="table table-striped">
                 <thead>
-                <a href="<?= $ADL_LP->adl_lp_plugin_page('allPages'); ?>" class="btn btn-primary btn-xs pull-right"> <span class="glyphicon glyphicon-refresh"></span> Refresh page lists </a>
+                <a href="" id="refreshPage" class="btn btn-primary btn-xs pull-right"> <span class="glyphicon glyphicon-refresh"></span> Refresh page lists </a>
                 <a href="<?= $ADL_LP->adl_lp_plugin_page('createLegalPage'); ?>" id="add_new_LP_button" class="btn btn-primary btn-xs pull-left"> <span class="glyphicon glyphicon-plus-sign"></span> Add New Legal Page </a>
 
                 <tr>
