@@ -3,7 +3,7 @@
     <div class="upgrade-notice-img">
         <img src="<?php echo WPLP_URL . '/admin/assets/img/premium.png'; ?>" alt="">
     </div>
-    <h3>Following Templates are Available in <a href="https://aazztech.com/product/legal-pages-pro/" target="_blank">Pro version</a></h3>
+    <h3>Following Templates are Available in <a href="https://wpwax.com/product/legal-pages-pro/" target="_blank">Pro version</a></h3>
 
     <ul>
         <li><span><img src="<?php echo WPLP_URL . '/admin/assets/img/check.png'; ?>" alt=""></span>
