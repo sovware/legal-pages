@@ -1,35 +1,23 @@
-
 /*GENERAL STYLES */
-.adl-general > p {
+.adl-general>p {
     padding-top: 10px;
 }
+
 h1.adl_lp_title {
     font-size: 23px;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-weight: 400;
     margin: 5px 0 10px 0;
 }
-#createLegalPage{
+
+#createLegalPage {
     padding-top: 20px;
 }
 
-#ChooseTemplate p {
-    font-size: 15px;
-    color: #337ab7;
+input#adl_accept_terms {
+    margin: -4px 2px 0 0;
 }
 
-h3.upgrade-title {
-    font-size: 23px;
-}
-
-h3.upgrade-title a {
-    text-decoration: underline;
-}
-
-a.adl_highlight {
-    font-size: 16px;
-    text-decoration: underline;
-}
 /*Ajax Loader*/
 .adl_lp_ajax_loading {
     background: url("../img/ajax-loader.gif") no-repeat center center;
@@ -37,7 +25,6 @@ a.adl_highlight {
     display: inline-block;
     min-height: 32px;
     min-width: 32px;
-
 }
 
 /* Pagination Style if needed later */
@@ -67,6 +54,7 @@ a.adl_highlight {
     background: dodgerblue;
 
 }
+
 .adl-lp-pagination a.page-numbers:hover {
     color: #fff;
     background: dodgerblue;
@@ -75,76 +63,74 @@ a.adl_highlight {
 
 /* Notification Style*/
 #adl-lp-notification {
-    min-height: 50px;
-    padding: 10px;
-    box-shadow: 0px 0px 13px #46b450;
+    min-height: 45px;
+    padding: 10px 15px;
     position: fixed;
-    bottom: 3%;
-    right: 0%;
-    background-color: white;
+    bottom: 30px;
+    right: 30px;
     transition: all .5s;
     z-index: 9999;
-    border: 3px solid green;
-    color: #4CAF50;
+    border: 0 none;
+    color: rgb(76 175 80);
+    border-radius: 4px;
+    background: rgba(76, 175, 80, 0.15);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#adl-lp-notification a {
+    display: inline-block;
+    margin-right: 10px;
 }
 
 #adl_close_it {
-    display: inline-block;
-    color: red;
-    border: 1px solid #ff0300;
+    display: inline-flex;
+    color: #fff;
     border-radius: 50%;
-    height:30px;
-    width: 30px;
-    background-color: #ffffff;
+    height: 25px;
+    width: 25px;
+    background-color: #444753;
     cursor: pointer;
     position: absolute;
-    line-height: 28px;
-    padding-left: 8px;
-    font-size: 19px;
-    top: -19px;
-    right: 0px;
-
+    font-size: 18px;
+    top: -11px;
+    right: -11px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
 }
 
-.adl-lp-upgrade-notice, #ChooseTemplate {
-    padding: 0px 3px 12px 20px;
+#adl_close_it:hover {
+    background-color: #000;
 }
-/*
-.adl_highlight,
-.adl-lp-upgrade-notice a {
-    display: inline-block;
-    padding:5px 7px;
-    font-weight:900;
-    text-decoration: none;
-    border:1px dashed #3c3c3c;
-    background: #000405;
-    color: #ffffff;
-}
-.adl-lp-upgrade-notice a{
-    -webkit-transition: background .2s ease-in;
-    -moz-transition: background .2s ease-in;
-    -ms-transition: background .2s ease-in;
-    -o-transition: background .2s ease-in;
-    transition: background .2s ease-in;
-}
-.adl-lp-upgrade-notice a:hover,
-.adl-lp-upgrade-notice a:active,
-.adl-lp-upgrade-notice a:focus,
-.adl_highlight a {
-    background: #fff;
-    color: #232323;
-    border:1px dashed #3c3c3c;
 
+/*POPUP Listing Page Style*/
+#adl_legal_popup_container {
+    margin-top: 20px;
 }
-*/
 
+#adl_legal_popup_container table tr td:nth-child(4) {
+    text-align: right;
+}
+
+#adl_legal_popup_container table tr th:nth-child(4) {
+    text-align: right;
+    padding-right: 50px;
+}
+
+/*fixing bootstrap messing with radio button on the admin setting page*/
+.checkbox label,
+.radio label {
+    padding-left: 0;
+}
 
 /* Text select */
-.lp-selectable{
-    -webkit-touch-callout: all; 
-    -webkit-user-select: all; 
-    -khtml-user-select: all; 
-    -moz-user-select: all; 
-    -ms-user-select: all; 
+.lp-selectable {
+    -webkit-touch-callout: all;
+    -webkit-user-select: all;
+    -khtml-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
     user-select: all;
 }
