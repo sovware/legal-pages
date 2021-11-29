@@ -36,6 +36,8 @@
             And many more.
         </li>
     </ul>
-    <?= $ADL_LP->upgrade_to_pro_link('adl-legal-pages-pro', 'Get the Pro Version Now!'); ?>
+    <div class="wplp-mt-30">
+        <?= $ADL_LP->upgrade_to_pro_link('adl-legal-pages-pro', 'Get the Pro Version Now!'); ?>
+    </div>
 </div>
 

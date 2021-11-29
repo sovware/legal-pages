@@ -32,11 +32,8 @@
                 echo $html;
                 ?>
             </div>
-        <hr>
-
-        <!--Show upgrade feature notice-->
-        <?php $ADL_LP->loadView('upgrade-template-lists'); ?>
-
+            <!--Show upgrade feature notice-->
+            <?php $ADL_LP->loadView('upgrade-template-lists'); ?>
         </div>  <!--ends .col-md-4 right column-->
 
     </div>

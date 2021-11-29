@@ -1,23 +1,35 @@
+
 /*GENERAL STYLES */
-.adl-general>p {
+.adl-general > p {
     padding-top: 10px;
 }
-
 h1.adl_lp_title {
     font-size: 23px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     font-weight: 400;
     margin: 5px 0 10px 0;
 }
-
-#createLegalPage {
+#createLegalPage{
     padding-top: 20px;
 }
 
-input#adl_accept_terms {
-    margin: -4px 2px 0 0;
+#ChooseTemplate p {
+    font-size: 15px;
+    color: #337ab7;
 }
 
+h3.upgrade-title {
+    font-size: 23px;
+}
+
+h3.upgrade-title a {
+    text-decoration: underline;
+}
+
+a.adl_highlight {
+    font-size: 16px;
+    text-decoration: underline;
+}
 /*Ajax Loader*/
 .adl_lp_ajax_loading {
     background: url("../img/ajax-loader.gif") no-repeat center center;
@@ -25,6 +37,7 @@ input#adl_accept_terms {
     display: inline-block;
     min-height: 32px;
     min-width: 32px;
+
 }
 
 /* Pagination Style if needed later */
@@ -54,7 +67,6 @@ input#adl_accept_terms {
     background: dodgerblue;
 
 }
-
 .adl-lp-pagination a.page-numbers:hover {
     color: #fff;
     background: dodgerblue;
@@ -73,13 +85,12 @@ input#adl_accept_terms {
     border: 0 none;
     color: rgb(76 175 80);
     border-radius: 4px;
-    background: rgba(76, 175, 80, 0.15);
+    background: #d6e9d7;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
-
-#adl-lp-notification a {
+#adl-lp-notification a{
     display: inline-block;
     margin-right: 10px;
 }
@@ -100,33 +111,45 @@ input#adl_accept_terms {
     justify-content: center;
     transition: 0.3s ease;
 }
-
-#adl_close_it:hover {
+#adl_close_it:hover{
     background-color: #000;
 }
 
-/*POPUP Listing Page Style*/
-#adl_legal_popup_container {
-    margin-top: 20px;
+.adl-lp-upgrade-notice, #ChooseTemplate {
+    padding: 0px 3px 12px 20px;
 }
+/*
+.adl_highlight,
+.adl-lp-upgrade-notice a {
+    display: inline-block;
+    padding:5px 7px;
+    font-weight:900;
+    text-decoration: none;
+    border:1px dashed #3c3c3c;
+    background: #000405;
+    color: #ffffff;
+}
+.adl-lp-upgrade-notice a{
+    -webkit-transition: background .2s ease-in;
+    -moz-transition: background .2s ease-in;
+    -ms-transition: background .2s ease-in;
+    -o-transition: background .2s ease-in;
+    transition: background .2s ease-in;
+}
+.adl-lp-upgrade-notice a:hover,
+.adl-lp-upgrade-notice a:active,
+.adl-lp-upgrade-notice a:focus,
+.adl_highlight a {
+    background: #fff;
+    color: #232323;
+    border:1px dashed #3c3c3c;
 
-#adl_legal_popup_container table tr td:nth-child(4) {
-    text-align: right;
 }
+*/
 
-#adl_legal_popup_container table tr th:nth-child(4) {
-    text-align: right;
-    padding-right: 50px;
-}
-
-/*fixing bootstrap messing with radio button on the admin setting page*/
-.checkbox label,
-.radio label {
-    padding-left: 0;
-}
 
 /* Text select */
-.lp-selectable {
+.lp-selectable{
     -webkit-touch-callout: all;
     -webkit-user-select: all;
     -khtml-user-select: all;

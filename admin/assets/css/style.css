@@ -860,6 +860,13 @@ li {
   background-color: #834EFF;
 }
 
+.tab-content .wplp-tab-content-inner{
+  padding-top: 25px;
+}
+.tab-content .wplp-tab-content-inner > .wplp-subtitle{
+  margin-top: 0;
+}
+
 .wplp-tab-content.well {
   border: 0 none;
   padding: 0;
