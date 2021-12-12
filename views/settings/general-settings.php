@@ -47,7 +47,7 @@ $disabled_pop_js_css = (isset($homeTabData['disabled_pop_js_css'])) ? absint($ho
 ?>
 
 <div class="wplp-container-sm wplp-ml-10">
-    <h1 class="wplp-page-title">Add New Legal Page</h1>
+    <h1 class="wplp-page-title">Settings</h1>
 
         <div class="row">
             <div class="col-sm-12">

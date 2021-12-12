@@ -2,7 +2,7 @@
 /* Define All Constants */
 global $wpdb;
 if ( !defined('ABSPATH') ) { die('You do not have right to access this file directly'); } // prevents direct access
-if ( !defined('ADL_LP_VERSION') ) { define('ADL_LP_VERSION', '1.0.0'); }
+if ( !defined('ADL_LP_VERSION') ) { define('ADL_LP_VERSION', '1.2.1'); }
 if ( !defined('ADL_LP_DIR') ) { define('ADL_LP_DIR', plugin_dir_path(__FILE__)); }
 if ( !defined('ADL_LP_URL') ) { define('ADL_LP_URL', plugin_dir_url(__FILE__)); }
 if ( !defined('ADL_LP_CLASS_DIR') ) { define('ADL_LP_CLASS_DIR', ADL_LP_DIR.'includes/classes/'); }
