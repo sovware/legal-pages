@@ -1,42 +1,52 @@
-﻿=== Legal Pages - Privacy Policy, GDPR, Terms & Conditions, Cookie Notice Generator ===
+﻿=== Legal Pages – WordPress GDPR, CCPA, Privacy Policy, Terms & Conditions, and Cookie Consent Plugin ===
 Contributors: wpWax
-Tags: legal, legal page, legal pages,  legal documents, law, legal page template, privacy policy, refund-policy, digital goods refund policy, linking policy, external links policy, cookie privacy policy, facebook policy, coppa - children’s online privacy policy, advertising disclosures, confidentiality disclosure, testimonials disclosure, affiliate disclosure, disclaimer, earnings disclaimer, medical disclaimer, terms of use, forced agreement to the terms, amazon affiliate, dmca, anti-spam, double dart cookie, about us, california privacy rights, end-user license agreement
+Tags: GDPR, Privacy Policy, Terms and conditions, Legal documents, Cookie notice
 Requires at least: 4.0
 Tested up to:  5.9
 Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-It generates legal pages for your website. It comes with ready-made templates which gives you even better experience creating legal pages with ease.
+The best WordPress legal pages generator. It comes with ready-made templates for GDPR, CCPA, DMCA, Privacy Policy, Terms & Conditions, Cookie Policy, etc
 
 == Description ==
 
-Do you know how important is it to have proper legal pages on your website based on your service? If you offer any kind of service and you do not have legal pages such as privacy policy, cookie policy, terms of use, terms and conditions of your service, return policy etc. then you may easily face a big lawsuits. And you really do not want to go through the ugly process of litigation because you have more important business to run. 
+👉 [Pro Version](https://wpwax.com/product/legal-pages-pro/) | [Documentation](https://wpwax.com/docs/legal-pages/) | [Support](https://wpwax.com/contact/) 👈
 
-To help you avoid any kind of lawsuit for your website and service, Legal Pages is your best friend. This is a very useful and easy-to-use plugin that will help you create important legal pages very easily even if you do not have any programming or legal knowledge.
+Do you know how important is it to have proper legal pages on your website based on your service? If you offer any kind of service and you do not have legal pages such as privacy policy, cookie policy, terms of use, terms and conditions, GDPR, CCPA, DMCA, return policy, etc then you may easily face a big lawsuits. And you really wouldn’t want to go through the ugly process of litigation, right?
 
-This plugin comes with pre-made legal template to help you create important legal pages and you can use those templates and edit them as much as you need and then you can publish your legal pages such as privacy policy, terms of use etc.
+To help you avoid any kind of lawsuit for your website and service, we brought to you Legal Pages - The best WordPress legal pages generator. It comes with ready-made templates for GDPR, CCPA, DMCA, Privacy Policy, Terms & Conditions, Cookie Policy, etc. This is a very useful and easy-to-use plugin that will help you create important legal pages very easily even if you do not have any programming or legal knowledge.
+
+[youtube https://youtu.be/-7e350mgVZs]
+
+Apart from showing legal pages, it also shows popups or modals and cookie bars to be accepted by the website visitors. With just a simple mouse click, you can smoothly insert any legal template into a new page as well as edit them as much as you need. Create GDPR, CCPA, DMCA, Privacy Policy, Terms & Conditions, Cookie Policy, COPAA, EU Privacy Policy, Refund-Policy, California Privacy Rights, End-user License Agreement, Terms of Use and many more within just a few clicks. No coding experience is required!
+
+Here is a quick tour of the plugin to help you get started
+
+[youtube https://youtu.be/ohBw3K7ui4E]
 
 = Here are a few unique features of this plugin: = 
 *   It has the highest number of Legal Page Template in the free version that you will not find anywhere.
-*   Most of the template are written in such a way that you sometime may not even need to edit anything, All important information is applied in the page automatically for you based on your website setting. 
+*   Easy one-click legal template insertion into pages.
 *   All templates are extremely easy to customize.
-*   You can also add new page template if you want.
-*   You can edit your legal pages in a very beautiful editor the way you edit normal WordPress page. So, you will feel very comfortable creating legal pages using this plugin.
-*   Very easy and easy-to-use setting panel.
-*   You can customize anything and create your legal pages staying on single page. NO need to refresh a lot. Because we used amazing technology to give you very fast user experience. 
+*   Personal and Site Information is applied to the legal page templates automatically based on the general settings.
+*   Edit and customize legal templates using WP editor.
+*   Ability to add a new page template or custom policy templates.
+*   Available more than 15 shortcodes that can be used on the templates.
+*   Create unlimited pop-ups and display them on any page using shortcode.
+*   Create pop-ups based on the legal page templates.
+*   Customize and display the cookie bar in your favorite position of the window.
+*   4 different cookie bar layout
 *   Very clean plugin and clean interface. NO ugly stuff.
-*   Very clean code.
-*   Very small in size.
-*   Very fast and clean user interface.
-*   100% secure codes following 100% correct guideline provided by the WordPress.
+*   100% secure codes following WordPress best coding practices.
 *   Modern Object Oriented Codes.
-*   And many more features. 
+*   And many more features.
 
 If you like this free version and want to get more templates and features and also support us, then you may upgrade to the [__Pro version__](https://wpwax.com/product/legal-pages-pro).
 
+
 = It contains all the features of the free version and including the following =
-*   26 Legal Page Templates. You can use them to create any type of legal page you want. You do not need to be an expert in law to create awesome legal pages with our premium plugin.
+*   29 Legal Page Templates. You can use them to create any type of legal page you want. You do not need to be an expert in law to create awesome legal pages with our premium plugin.
 *   Ability to show a very beautiful and customization EU-cookie agreement notice button. You can decide how to show the cookie agreement to the user. 
 *   You can show cookie agreement bar on any where in the page.
 *   You can also show cookie notice as a pop ups.
