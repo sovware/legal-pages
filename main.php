@@ -110,6 +110,7 @@ if ( ! class_exists('Adl_Legal_Pages') ) :
             $privacy = file_get_contents(dirname(__FILE__) . '/templates/privacy.html');
             $dmca = file_get_contents(dirname(__FILE__) . '/templates/dmca.html');
             $pcp = file_get_contents(dirname(__FILE__) . '/templates/privacy-cookie-policy.html');
+            $ccpa = file_get_contents(dirname(__FILE__) . '/templates/ccpa.html');
 
             // set default plugin's options
             add_option('adl_lp_excludePage', 'true');
@@ -141,6 +142,11 @@ if ( ! class_exists('Adl_Legal_Pages') ) :
                 $wpdb->insert($this->template_table_name, array('name'=>'Cookie Privacy Policy','content'=>$pcp,'type'=>'1a2b3c4d5e6f7g8h9i'), array('%s','%s','%s'));
                 $wpdb->insert($this->template_table_name, array('name'=>'DMCA','content'=>$dmca,'type'=>'10j'), array('%s','%s','%s'));
                 update_option('adl_demo_inserted', true); // set this true to prevent users from inserting the save data again if user activate the plugin again.
+                
+            }
+            if ( ! get_option('adl_ccpa_demo_inserted') ) {
+                $wpdb->insert($this->template_table_name, array('name'=>'California Consumer Privacy Act (CCPA)','content'=>$ccpa,'type'=>'1a2b3c4d5e6f7g8h9i'), array('%s','%s','%s'));
+                update_option('adl_ccpa_demo_inserted', true);
             }
         }
 

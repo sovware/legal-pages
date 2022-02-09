@@ -1,13 +1,13 @@
-﻿=== Legal Pages – WordPress GDPR, CCPA, Privacy Policy, Terms & Conditions, and Cookie Consent Plugin ===
+﻿=== Legal Pages – Privacy Policy, Terms & Conditions, GDPR, CCPA, and Cookie Notice Generator ===
 Contributors: wpWax
 Tags: GDPR, Privacy Policy, Terms and conditions, Legal documents, Cookie notice
 Requires at least: 4.0
 Tested up to:  5.9
-Stable tag: 1.2.2
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The best WordPress legal pages generator. It comes with ready-made templates for GDPR, CCPA, DMCA, Privacy Policy, Terms & Conditions, Cookie Policy, etc
+The best WordPress legal pages generator that comes with pre-made templates for GDPR, CCPA, DMCA, Privacy Policy, Terms & Conditions, Cookie Policy, etc
 
 == Description ==
 
@@ -36,7 +36,7 @@ Here is a quick tour of the plugin to help you get started
 *   Create unlimited pop-ups and display them on any page using shortcode.
 *   Create pop-ups based on the legal page templates.
 *   Customize and display the cookie bar in your favorite position of the window.
-*   4 different cookie bar layout
+*   5 different cookie bar layout
 *   Very clean plugin and clean interface. NO ugly stuff.
 *   100% secure codes following WordPress best coding practices.
 *   Modern Object Oriented Codes.
@@ -83,6 +83,9 @@ If you like this free version and want to get more templates and features and al
 	<li> About Us</li>
 	<li> California Privacy Rights</li>
 	<li> End-user License Agreement</li>
+	<li> New - GDPR Cookie Policy</li>
+	<li> New - GDPR Privacy Policy</li>
+	<li> New - California Consumer Privacy Act (CCPA) </li>
 </ol>
 
 
@@ -103,6 +106,8 @@ If you like this free version and want to get more templates and features and al
 7. Edit Legal Page Template
 
 == Changelog ==
+= 1.3.0 =
+* Add: California Consumer Privacy Act (CCPA) template
 = 1.2.2 =
 * Add: WordPress 5.9 compatibility
 = 1.2.1 =

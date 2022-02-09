@@ -70,6 +70,9 @@
             DMCA
         </li>
         <li><span><img src="<?php echo WPLP_URL . '/admin/assets/img/check.png'; ?>" alt=""></span>
+            California Consumer Privacy Act (CCPA)
+        </li>
+        <li><span><img src="<?php echo WPLP_URL . '/admin/assets/img/check.png'; ?>" alt=""></span>
             Antispam
         </li>
         <li><span><img src="<?php echo WPLP_URL . '/admin/assets/img/check.png'; ?>" alt=""></span>
@@ -83,6 +86,12 @@
         </li>
         <li><span><img src="<?php echo WPLP_URL . '/admin/assets/img/check.png'; ?>" alt=""></span>
             End-user License Agreement
+        </li>
+        <li><span><img src="<?php echo WPLP_URL . '/admin/assets/img/check.png'; ?>" alt=""></span>
+            GDPR Cookie Policy
+        </li>
+        <li><span><img src="<?php echo WPLP_URL . '/admin/assets/img/check.png'; ?>" alt=""></span>
+            GDPR Privacy Policy
         </li>
     </ul>
     <a class="wplp-btn-primary wplp-mt-30" href="https://wpwax.com/product/legal-pages-pro/" target="_blank">And check out more features »</a>
