@@ -9,7 +9,7 @@
 
                 <input type="checkbox" name="adl_accept_terms" value="1" id="adl_accept_terms" <?php if(isset($lpterms) && $lpterms==1) { echo "checked"; }?> onclick="jQuery('#adl_lp_submit').toggle();">
 
-                <label for="adl_accept_terms" class="wplp-checkbox__label">Or Enter Coordinates (latitude and longitude) Manually</label>
+                <label for="adl_accept_terms" class="wplp-checkbox__label">You need to accept the disclaimer to use this plugin</label>
 
             </div>
 
