@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Legal Pages – WordPress GDPR, CCPA, Privacy Policy, Terms & Conditions, and Cookie Consent Plugin
+Plugin Name: Legal Pages
 Plugin URI: https://wpwax.com/product/legal-pages-pro
 Description: A very useful plugin to generate legal pages for your websites/ business. It is simple, easy and elegant to use. It comes with ready-made templates which gives you even better experience creating legal pages with ease. You can customize the page template too.
-Version: 1.3.1
+Version: 1.3.2
 Author: wpWax
 Author URI: https://wpwax.com
 License: GPLv2 or later
