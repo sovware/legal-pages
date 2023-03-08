@@ -3,7 +3,7 @@ Contributors: wpWax
 Tags: GDPR, Privacy Policy, Terms and conditions, Legal documents, Cookie notice
 Requires at least: 4.0
 Tested up to:  6.1
-Stable tag: 1.3.3
+Stable tag: 1.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,18 @@ Apart from showing legal pages, it also shows popups or modals and cookie bars t
 Here is a quick tour of the plugin to help you get started
 
 [youtube https://youtu.be/ohBw3K7ui4E]
+
+**OTHER AMAZING PRODUCTS FROM WPWAX**
+
+👉  [Directorist](https://wordpress.org/plugins/directorist/) – WordPress Business Directory Plugin with Classified Ads Listings
+
+👉  [HelpGent](https://wordpress.org/plugins/helpgent/) – Your Ultimate Help Agent for Video, Voice, and Text Messaging with Screen Record Facility
+
+👉  [Post Grid, Slider & Carousel Ultimate](https://wordpress.org/plugins/post-grid-carousel-ultimate/) – The easiest and most useful plugin to display blog posts, pages, or custom posts in beautiful post layouts like post grid, post carousel & post slider
+
+👉  [Product Carousel Slider & Grid Ultimate for WooCommerce](https://wordpress.org/plugins/woo-product-carousel-slider-and-grid-ultimate/) – The most intuitive solution to make your eCommerce site visually appealing. Create & customize WooCommerce product carousel, sliders, or grids easily
+
+👉  [Logo Showcase Ultimate](https://wordpress.org/plugins/logo-showcase-ultimate/) – Ultimate logo showcase plugin to create responsive logo carousel, logo slider & logo grid and display unlimited clients, partners, sponsors logos
 
 = Here are a few unique features of this plugin: = 
 *   It has the highest number of Legal Page Template in the free version that you will not find anywhere.
@@ -106,6 +118,8 @@ If you like this free version and want to get more templates and features and al
 7. Edit Legal Page Template
 
 == Changelog ==
+= 1.3.4 =
+* Fix: Style issue
 = 1.3.3 =
 * Add: WordPress 6.1 compatibility
 = 1.3.2 =
