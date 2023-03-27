@@ -2,8 +2,8 @@
 Contributors: wpWax
 Tags: GDPR, Privacy Policy, Terms and conditions, Legal documents, Cookie notice
 Requires at least: 4.0
-Tested up to:  6.1
-Stable tag: 1.3.4
+Tested up to:  6.2
+Stable tag: 1.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -118,6 +118,8 @@ If you like this free version and want to get more templates and features and al
 7. Edit Legal Page Template
 
 == Changelog ==
+= 1.3.5 =
+* Add: WordPress 6.2 compatibility
 = 1.3.4 =
 * Fix: Style issue
 = 1.3.3 =
