@@ -20,8 +20,8 @@ if ( ! class_exists('Adl_Legal_Pages') ) :
             $this->load_classes(ADL_LP_CLASS_DIR);
             add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes') );
             add_shortcode( 'wpwax_legal_page', array( $this, 'wpwax_legal_page' ) );
-            if( empty( get_option('wplp_legal_page') ) ) {
-                //add_action( 'admin_notices', array( $this, 'admin_notices') );
+            if( empty( get_option('wplp_legal_page_discount') ) ) {
+                add_action( 'admin_notices', array( $this, 'admin_notices') );
             } 
             // Initialize appsero tracking
             $this->init_appsero();
