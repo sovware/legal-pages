@@ -1,6 +1,7 @@
 ﻿=== Legal Pages – Privacy Policy, Terms & Conditions, GDPR, CCPA, and Cookie Notice Generator ===
 Contributors: wpWax
-Tags: GDPR, Privacy Policy, Terms and conditions, Legal documents, Cookie notice
+Tags: GDPR, Privacy Policy, Terms and conditions, Legal documents, Cookie notice, Legal compliance, Legal templates, Website legal requirements, Legal pages generator, GDPR compliance, CCPA compliance, DMCA compliance
+
 Requires at least: 4.0
 Tested up to:  6.2
 Stable tag: 1.3.5
