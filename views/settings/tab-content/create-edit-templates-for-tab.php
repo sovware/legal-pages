@@ -19,15 +19,15 @@ $adl_lp_templates = (!empty($args)) ? $args : null; // data are passed to pages 
                 </thead>
 
                 <?php
-                if ( count($adl_lp_templates) ) {
+                if ( ! empty( $adl_lp_templates ) ) {
 
 
-                    foreach ($adl_lp_templates as $adl_lp) {
+                    foreach( $adl_lp_templates as $adl_lp ) {
                     ?>
                         <tr id="id-<?= $adl_lp->id; ?>" data-id="<?= $adl_lp->id; ?>" >
                             <td><?= $adl_lp->id; ?></td>
                             <td><a href="<?php $ADL_LP->adl_lp_action_link($adl_lp->id); ?>" title="Edit this"> <?= $adl_lp->name; ?>  </a></td>
-                            <td style="width: 320px"><a class='wplp-btn wplp-btn-blue-royal' href="<?php $ADL_LP->adl_lp_action_link($adl_lp->id); ?>" title="Edit Template"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="<?php $ADL_LP->adl_lp_action_link($adl_lp->id, 'delete'); ?>" data-id="<?= $adl_lp->id; ?>" class="wplp-btn wplp-btn-danger deleteLegalTemplate" title="Delete it permanently"><span class="glyphicon glyphicon-trash"></span> Delete</a></td>
+                            <td style="width: 320px"><a class='wplp-btn wplp-btn-blue-royal' href="<?php $ADL_LP->adl_lp_action_link($adl_lp->id); ?>" title="Edit Template"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="<?php $ADL_LP->adl_lp_action_link($adl_lp->id, 'delete'); ?>" data-id="<?= $adl_lp->id; ?>" data-nonce ="<?php echo wp_create_nonce( 'adl_LP_nonce_action' ); ?>" class="wplp-btn wplp-btn-danger deleteLegalTemplate" title="Delete it permanently"><span class="glyphicon glyphicon-trash"></span> Delete</a></td>
                         </tr>
 
                     <?php  }

@@ -354,10 +354,9 @@
     //DELETE the Legal Page Template on user click on trash icon. NEXT ADD CONFIRM AND USE SWEET ALERT JS LIBRARY
     $(document).on('click', 'a.deleteLegalTemplate', function (e) {
         e.preventDefault();
-        const $this = $(this);
-        const container = $('#adl_legal_template_container');
-        const postID = '&template_id=' + $this.data('id');
-        // console.dir($this.closest('tr'));
+        const $this        = $(this);
+        const container    = $('#adl_legal_template_container');
+        const postID       = '&template_id=' + $this.data('id') + '&adl_LP_nonce=' + $this.data('nonce');
         $("#successResult").remove();
 
         adlAjaxHandler(container, 'deleteLegalTemplate', postID, function (data) {

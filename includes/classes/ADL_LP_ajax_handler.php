@@ -27,18 +27,25 @@ class ADL_LP_ajax_handler {
         add_action( 'wp_ajax_addNewLegalTemplate', array($this, 'addNewLegalTemplate'));
         add_action( 'wp_ajax_editLegalTemplate', array($this, 'editLegalTemplate'));
         add_action( 'wp_ajax_deleteLegalTemplate', array($this, 'deleteLegalTemplate'));
-
-
     }
 
 
     public function deleteLegalTemplate() {
         global $ADL_LP, $wpdb;
-        $tmpl_id = (!empty($_POST['template_id'])) ? absint($_POST['template_id']) : 0;
-        $success = $wpdb->delete($ADL_LP->template_table_name, array('id'=>$tmpl_id), array('%d'));
-        echo ($success) ? 'success': 'error';
+        
+        if ( current_user_can( 'delete_posts' ) ) {
+            if( $ADL_LP->verifyNonce() ) {
+                $tmpl_id = ( ! empty( $_POST['template_id'] ) ) ? absint( $_POST['template_id'] ) : 0;
+                $success = $wpdb->delete( $ADL_LP->template_table_name, array('id'=>$tmpl_id), array('%d') );
+                echo ( $success ) ? 'success': 'error';
+            } else {
+                esc_html_e( 'invalid nonce', 'legal-pages' );
+            }
+        } else {
+            esc_html_e( 'insufficient permission', 'legal-pages' );
+        }
+        
         wp_die();
-
     }
 
 
