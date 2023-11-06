@@ -51,6 +51,11 @@ class ADL_LP_ajax_handler {
 
     public function editLegalTemplate() {
         global $ADL_LP, $wpdb;
+
+        if ( ! current_user_can( 'manage_options' ) ) {
+            die( 'Permission denied.' );
+        }
+        
         if($ADL_LP->verifyNonce()) {
             $id = ( !empty($_POST['id']) ) ? absint($_POST['id']) : '';
             $lp_title = ( !empty($_POST['lp_title']) ) ? sanitize_text_field($_POST['lp_title']) : '';
@@ -87,12 +92,24 @@ class ADL_LP_ajax_handler {
 
 
     public function moveToTrash() {
-        $post_id = (!empty($_POST['post_id'])) ? absint($_POST['post_id']) : null;
-        if ( wp_trash_post($post_id) ) {
+        global $ADL_LP;
+
+        if ( ! current_user_can( 'manage_options' ) ) {
+            die( 'Permission denied.' );
+        }
+        
+        if( ! $ADL_LP->verifyNonce() ) {
+            die( 'Security check failed.' );
+        }
+
+        $post_id = ! empty( $_POST['post_id'] ) ? absint( $_POST['post_id'] ) : null;
+
+        if ( $post_id && wp_trash_post($post_id) ) {
             echo 'success';
         }else{
             echo 'error';
         }
+
         wp_die();
     }
 
@@ -129,6 +146,12 @@ class ADL_LP_ajax_handler {
 
     public function fetch_and_insert_template_data(  ) {
         global $ADL_LP, $wpdb;
+
+        if ( ! current_user_can( 'manage_options' ) || ! $ADL_LP->verifyNonce() ) {
+            wp_send_json_error();
+            die;
+        }
+
         $id = (!empty($_POST['template_id'])) ? absint($_POST['template_id']) : '';
         $result = $wpdb->get_row($wpdb->prepare("SELECT * from {$ADL_LP->template_table_name}  WHERE id = %d", $id));
         $name = $result->name;
@@ -155,7 +178,7 @@ class ADL_LP_ajax_handler {
             $encodedData = json_encode($data);
             echo $encodedData;
         }else{
-        echo 'error';
+            wp_send_json_error();
         }
         wp_die();
 

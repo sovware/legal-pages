@@ -197,17 +197,19 @@
         const form = $("#showTemplateTypeForm");
         e.preventDefault();
         // var type =  data +'&' + $(this).data('type');
-        const id = 'template_id=' + $(this).data('id');
+        //const id = 'template_id=' + $(this).data('id');
         const lp_title = $('#lp_title');
+        var data = 'template_id=' + $(this).data('id');
+        data += '&adl_LP_nonce=' + $(this).data('nonce');
         // console.log(id);
         $("#successResult").remove();
         // get submitted from data and serialize them and send them to the ajax handler
 
         //var iconBindingElement = jQuery('#adl_ajax_loader');
-        adlAjaxHandler(form, 'fetch_and_insert_template_data', id, function (data) {
+        adlAjaxHandler(form, 'fetch_and_insert_template_data', data, function (data) {
             if (!tinyMCE.activeEditor) jQuery('.wp-editor-wrap .switch-tmce').trigger('click');
-
-            if (data != 'error') {
+           
+            if ( data.success !== false ) {
                 var jsn = isJson(data);
                 if (jsn) {
                     var parsedData = JSON.parse(data);
@@ -217,8 +219,7 @@
                 }
                 autoCLoseMessage('Page Content Updated Successfully. <span id="adl_close_it">&times;</span>', 2000);
             } else {
-                $('<div class="notice notice-error is-dismissible" id="successResult"><p>Error: Something went wrong.<pre>' + data + '</pre></p></div>').insertAfter(form);
-
+                autoCLoseMessage( '<div class="notice notice-error is-dismissible" id="successResult"><p>Error: Something went wrong.</p></div>', 2000 );
             }
         });
     });
@@ -270,11 +271,12 @@
         e.preventDefault();
         const $this = $(this);
         const container = $('#legalPageContainer');
-        const postID = '&post_id=' + $this.data('id');
+        var data = '&post_id=' + $this.data('id');
+        data += '&adl_LP_nonce=' + $this.data('nonce');
         // console.dir($this.closest('tr'));
         $("#successResult").remove();
 
-        adlAjaxHandler(container, 'moveToTrash', postID, function (data) {
+        adlAjaxHandler(container, 'moveToTrash', data, function (data) {
 
             if (data === 'success') {
                 autoCLoseMessage('Page has been moved to the Trash Successfully<span id="adl_close_it">&times;</span>', 3000);

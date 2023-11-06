@@ -1,4 +1,4 @@
-<?php $adl_lps = (!empty($args->posts)) ? $args->posts : null; // data are passed to pages wrapped in the $args variable.
+<?php $adl_lps = ! empty($args->posts) ? $args->posts : null; // data are passed to pages wrapped in the $args variable.
 
 ?>
 <div class="wplp-container-fluid wplp-ml-10 wplp-pr-30" id="legalPageContainer">
@@ -20,13 +20,13 @@
             $adl_lps = !empty($adl_lps) ? $adl_lps : array();
             if ( count($adl_lps) ) {
             foreach ($adl_lps as $adl_lp) {    ?>
-                <tr id="id-<?= $adl_lp->ID; ?>" data-id="<?= $adl_lp->ID; ?>" >
-                    <td><?= $adl_lp->ID; ?></td>
-                    <td><a href="<?= get_edit_post_link($adl_lp->ID); ?>" title="Edit this"> <?= $adl_lp->post_title; ?>  </a></td>
-                    <td><?= $ADL_LP->author_name_and_post_link($adl_lp->post_author, 'page'); ?></td>
-                    <td><?= $ADL_LP->humanDate($adl_lp->ID); ?></td>
-                    <td class="lp-selectable">[wpwax_legal_page id="<?php echo $adl_lp->ID; ?>"]</td>
-                    <td class="text-center"><a class='wplp-btn wplp-btn-blue-royal' href="<?= $adl_lp->guid; ?>" title="View page"><span class="glyphicon glyphicon-eye-open"></span> View</a> <a class='wplp-btn wplp-btn-blue-royal' href="<?= get_edit_post_link($adl_lp->ID); ?>" title="Edit page"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" data-id="<?= $adl_lp->ID; ?>" class="wplp-btn wplp-btn-danger moveToTrash" title="Move to Trash"><span class="glyphicon glyphicon-trash"></span> Trash</a></td>
+                <tr id="id-<?php echo esc_attr( $adl_lp->ID ); ?>" data-id="<?php echo esc_attr( $adl_lp->ID ); ?>" >
+                    <td><?php echo esc_html( $adl_lp->ID ); ?></td>
+                    <td><a href="<?php echo esc_url( get_edit_post_link( $adl_lp->ID ) ); ?>" title="Edit this"> <?php echo esc_html( $adl_lp->post_title ); ?>  </a></td>
+                    <td><?php echo wp_kses_post( $ADL_LP->author_name_and_post_link( $adl_lp->post_author, 'page' ) ); ?></td>
+                    <td><?php echo  esc_html( $ADL_LP->humanDate( $adl_lp->ID ) ); ?></td>
+                    <td class="lp-selectable">[wpwax_legal_page id="<?php echo esc_attr( $adl_lp->ID ); ?>"]</td>
+                    <td class="text-center"><a class='wplp-btn wplp-btn-blue-royal' href="<?php  echo esc_url( $adl_lp->guid ); ?>" title="View page"><span class="glyphicon glyphicon-eye-open"></span> View</a> <a class='wplp-btn wplp-btn-blue-royal' href="<?php echo get_edit_post_link( $adl_lp->ID ); ?>" title="Edit page"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" data-id="<?= $adl_lp->ID; ?>" data-nonce="<?php echo wp_create_nonce( 'adl_LP_nonce_action' ); ?>" class="wplp-btn wplp-btn-danger moveToTrash" title="Move to Trash"><span class="glyphicon glyphicon-trash"></span> Trash</a></td>
                 </tr>
             <?php  }
             } else {

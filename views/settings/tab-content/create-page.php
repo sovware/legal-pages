@@ -21,13 +21,14 @@
                 <h3><span class='dashicons dashicons-admin-generic'></span> Choose a Template</h3>
                 <?php
                 global $wpdb;
+                $nonce = wp_create_nonce('adl_LP_nonce_action');
                 // show all templates
                 $sql = 'SELECT * from '.$ADL_LP->template_table_name .' LIMIT 30';
                 $results = $wpdb->get_results($sql);
                 $html ='';
                 foreach ( $results as $result   ) {
                     $html .= "<p><span class='dashicons dashicons-arrow-right
-'></span> <a href='#' id='id-{$result->id}' data-id='{$result->id}'>{$result->name} </a></p>";
+'></span> <a href='#' id='id-{$result->id}' data-id='{$result->id}' data-nonce='{$nonce}'>{$result->name} </a></p>";
                 }
                 echo $html;
                 ?>
