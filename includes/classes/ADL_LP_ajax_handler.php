@@ -94,12 +94,8 @@ class ADL_LP_ajax_handler {
     public function moveToTrash() {
         global $ADL_LP;
 
-        if ( ! current_user_can( 'manage_options' ) ) {
-            die( 'Permission denied.' );
-        }
-        
-        if( ! $ADL_LP->verifyNonce() ) {
-            die( 'Security check failed.' );
+        if ( ! current_user_can( 'manage_options' ) || ! $ADL_LP->verifyNonce() ) {
+            die('Error: Something went wrong');
         }
 
         $post_id = ! empty( $_POST['post_id'] ) ? absint( $_POST['post_id'] ) : null;
