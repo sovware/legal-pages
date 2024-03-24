@@ -43,9 +43,14 @@ class ADL_LP_database {
 
     public function get_lp_templates( $limit = -1 ) {
         global $ADL_LP, $wpdb;
-        $limit = (!empty($limit) && -1 !==$limit) ? " LIMIT {$limit}" : '';
-        $sql1 = 'SELECT * from '.$ADL_LP->template_table_name .$limit;
-        return $wpdb->get_results($sql1); // get all legal templates
+        // Construct the SQL query
+        $sql = "SELECT * FROM {$ADL_LP->template_table_name}";
+
+        // Append the LIMIT clause if a valid limit is provided
+        if ( ! empty( $limit ) && $limit !== -1 ) {
+            $sql .= $wpdb->prepare( " LIMIT %d", $limit );
+        }
+        return $wpdb->get_results($sql); // get all legal templates
         
     }
 

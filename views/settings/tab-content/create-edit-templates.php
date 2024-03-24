@@ -3,7 +3,7 @@
 if ( !empty($_GET['action']) && 'edit' == $_GET['action'] ) {
     global $ADL_LP, $wpdb;
     $template_id = (!empty($_GET['id'])) ? absint($_GET['id']) : 0;
-    $sql = $wpdb->prepare("SELECT * FROM {$ADL_LP->template_table_name} WHERE id=%d LIMIT 1", $template_id);
+    $sql = $wpdb->prepare("SELECT * FROM {$ADL_LP->template_table_name} WHERE id=%d LIMIT %d", $template_id, 1);
     $template = $wpdb->get_row($sql);
     ?>
 <!--template editing code goes here-->

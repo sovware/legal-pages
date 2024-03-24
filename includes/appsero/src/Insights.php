@@ -503,10 +503,16 @@ class Insights {
      *
      * @return integer
      */
-    public function get_post_count( $post_type ) {
+    public function get_post_count( $post_type )
+    {
         global $wpdb;
 
-        return (int) $wpdb->get_var( "SELECT count(ID) FROM $wpdb->posts WHERE post_type = '$post_type' and post_status = 'publish'");
+        return (int) $wpdb->get_var(
+            $wpdb->prepare(
+                "SELECT count(ID) FROM $wpdb->posts WHERE post_type = %s and post_status = %s",
+                [$post_type, 'publish']
+            )
+        );
     }
 
     /**
@@ -767,15 +773,19 @@ class Insights {
      */
     public function uninstall_reason_submission() {
 
-        if ( ! isset( $_POST['reason_id'] ) ) {
+        if (!isset($_POST['nonce'])) {
+            return;
+        }
+
+        if (!isset($_POST['reason_id'])) {
             wp_send_json_error();
         }
 
-        if ( ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['nonce'] ) ), 'appsero-security-nonce' ) ) {
+        if (!wp_verify_nonce(sanitize_key(wp_unslash($_POST['nonce'])), 'appsero-security-nonce')) {
             wp_send_json_error('Nonce verification failed');
         }
 
-        if ( ! current_user_can( 'manage_options' ) ) {
+        if (!current_user_can('manage_options')) {
             wp_send_json_error('You are not allowed for this task');
         }
 

@@ -84,7 +84,7 @@ class ADL_LP_general {
 
     public function show_create_template(  ) {
         global $ADL_LP, $wpdb;
-        $sql1 = 'SELECT * from '.$ADL_LP->template_table_name .' LIMIT 40';
+        $sql1 = $wpdb->prepare("SELECT * FROM {$this->template_table_name} LIMIT %d", 40);
         $adl_lp_templates = $wpdb->get_results($sql1); // get all legal templates
         $ADL_LP->loadView('settings/tab-content/create-edit-templates', $adl_lp_templates);
     }
@@ -134,7 +134,7 @@ class ADL_LP_general {
     public function acceptTermsAndCondition() {
         global $ADL_LP;
         // set adl_lp_accept_term when user use the plugin for the first time and them load the general  setting. else show the terms page.
-        if ( isset($_POST['adl_lp_submit']) && 'Accept' == $_POST['adl_lp_submit'] && isset($_POST['adl_accept_terms'])) {
+        if ( isset( $_POST['adl_lp_submit'] ) && 'Accept' == $_POST['adl_lp_submit'] && isset( $_POST['adl_accept_terms'] ) && wp_verify_nonce( $_POST['adl_lp_accept_terms_nonce_field'], 'adl_lp_accept_terms_nonce' ) ) {
             update_option('adl_lp_accept_term', $_POST['adl_accept_terms']);
             $this->general_setting();
         }else{
