@@ -43,7 +43,9 @@ $popup_width = (isset($homeTabData['popup_width'])) ? sanitize_text_field($homeT
 $popup_height = (isset($homeTabData['popup_height'])) ? sanitize_text_field($homeTabData['popup_height']) : '90vh';
 $user_can_close_popup = (isset($homeTabData['user_can_close_popup'])) ? absint($homeTabData['user_can_close_popup']) : 0;
 $disabled_pop_js_css = (isset($homeTabData['disabled_pop_js_css'])) ? absint($homeTabData['disabled_pop_js_css']): 0;
-
+$hide_delete = get_option( 'adl_lp_misc' );
+$hide_lp_in_search = ! empty( $hide_delete['hide_lp_in_search'] ) ? absint( $hide_delete['hide_lp_in_search'] ) : 0;
+$delete_adl_lp_data = ! empty( $hide_delete['delete_adl_lp_data'] ) ? absint( $hide_delete['delete_adl_lp_data'] ) : 0;
 ?>
 
 <div class="wplp-container-sm wplp-ml-10">
@@ -264,7 +266,7 @@ $disabled_pop_js_css = (isset($homeTabData['disabled_pop_js_css'])) ? absint($ho
 
                                     <div class="form-group">
                                         <label for="hide_lp_in_search" class="wplp-switch-label wplp-mb-20">
-                                            <input type="checkbox" class="form-control wplp-switch" name="hide_lp_in_search" id="hide_lp_in_search" value="1" <?php checked(@$args['hide_lp_in_search']); ?>>
+                                            <input type="checkbox" class="form-control wplp-switch" name="hide_lp_in_search" id="hide_lp_in_search" value="1" <?php checked( $hide_lp_in_search ); ?>>
                                             <span class="wplp-input-switch">
                                                 <span class="wplp-input-switch__yes">Yes</span>
                                                 <span class="wplp-input-switch__no">No</span>
@@ -273,7 +275,7 @@ $disabled_pop_js_css = (isset($homeTabData['disabled_pop_js_css'])) ? absint($ho
                                         </label>
 
                                         <label for="delete_adl_lp_data" class="wplp-switch-label">
-                                            <input type="checkbox" class="form-control wplp-switch" name="delete_adl_lp_data" id="delete_adl_lp_data" value="1" <?php checked(@$args['delete_adl_lp_data']); ?>>
+                                            <input type="checkbox" class="form-control wplp-switch" name="delete_adl_lp_data" id="delete_adl_lp_data" value="1" <?php checked( $delete_adl_lp_data ); ?>>
                                             <span class="wplp-input-switch">
                                                 <span class="wplp-input-switch__yes">Yes</span>
                                                 <span class="wplp-input-switch__no">No</span>
