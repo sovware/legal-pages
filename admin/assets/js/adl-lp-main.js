@@ -461,23 +461,64 @@
     });
 
     //DELETE the Legal Page Template on user click on trash icon. NEXT ADD CONFIRM AND USE SWEET ALERT JS LIBRARY
-    $(document).on('click', 'a.deleteLegalTemplate', function (e) {
+    jQuery(document).on('click', 'a.deleteLegalTemplate', function (e) {
         e.preventDefault();
-        const $this        = $(this);
-        const container    = $('#adl_legal_template_container');
-        const postID       = '&template_id=' + $this.data('id') + '&adl_LP_nonce=' + $this.data('nonce');
-        $("#successResult").remove();
 
-        adlAjaxHandler(container, 'deleteLegalTemplate', postID, function (data) {
-            if (data === 'success') {
-                autoCLoseMessage('The Page Template has been deleted Successfully<span id="adl_close_it">&times;</span>', 3000);
-                $this.closest('tr').fadeOut();
+        const $this = jQuery(this);
+        const postId = $this.data('id');
+        const nonce = $this.data('nonce');
+        const container = jQuery('#adl_legal_template_container');
 
-            } else {
-                $('<div class="notice notice-error is-dismissible" id="successResult"><p>Error: Something went wrong.<pre>' + data + '</pre></p></div>').insertAfter(container);
-            }
+        // Get page title if available
+        let pageTitle = $this.closest('tr').find('td:nth-child(2) a').text().trim() || 'this template';
+
+        // Build confirmation modal
+        const modalHTML = `
+            <div id="adl-trash-modal-overlay">
+                <div id="adl-trash-modal">
+                    <h3>Delete Page Template</h3>
+                    <p>Are you sure you want to <strong>delete permanently</strong> "<strong>${pageTitle}</strong>"?</p>
+                    <button class="btn btn-confirm">Yes, Delete</button>
+                    <button class="btn btn-cancel">Cancel</button>
+                </div>
+            </div>
+        `;
+
+        // Append modal to container
+        const $modalContainer = jQuery('#adl-trash-modal-container');
+        $modalContainer.html(modalHTML);
+        jQuery('#adl-trash-modal-overlay').fadeIn();
+
+        // Cancel button
+        jQuery('#adl-trash-modal .btn-cancel').on('click', function () {
+            jQuery('#adl-trash-modal-overlay').fadeOut(function () {
+                $modalContainer.empty();
+            });
         });
-    });
+
+        // Confirm button
+            jQuery('#adl-trash-modal .btn-confirm').on('click', function () {
+                jQuery('#adl-trash-modal-overlay').fadeOut(function () {
+                    $modalContainer.empty();
+                });
+
+                // Remove previous success/error messages
+                jQuery("#successResult").remove();
+
+                const postData = '&template_id=' + postId + '&adl_LP_nonce=' + nonce;
+
+                // Your existing AJAX handler
+                adlAjaxHandler(container, 'deleteLegalTemplate', postData, function (data) {
+                    if (data === 'success') {
+                        autoCLoseMessage('The Page Template has been deleted Successfully<span id="adl_close_it">&times;</span>', 3000);
+                        $this.closest('tr').fadeOut();
+                    } else {
+                        jQuery('<div class="notice notice-error is-dismissible" id="successResult"><p>Error: Something went wrong.<pre>' + data + '</pre></p></div>').insertAfter(container);
+                    }
+                });
+            });
+        });
+
 
     /*
      * HELPER FUNCTIONS
